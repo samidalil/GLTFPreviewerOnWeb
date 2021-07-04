@@ -1,0 +1,12 @@
+{
+  "name": "threejs_viewer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "servez ."
+  },
+  "dependencies": {
+    "servez": "^1.11.0"
+  }
+}

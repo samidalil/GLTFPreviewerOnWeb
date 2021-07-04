@@ -1,0 +1,9 @@
+.ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.interactable {
+  pointer-events: all;
+}

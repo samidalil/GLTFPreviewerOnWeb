@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/three.css">
+    <link rel="stylesheet" href="./css/ui/background-picker.css">
+    <link rel="stylesheet" href="./css/ui/index.css">
+    <link rel="stylesheet" href="./css/ui/mesh-gallery.css">
+    <script type="module" src="./src/index.js"></script>
+  </head>
+  <body>
+    <canvas id="three-js-canvas"></canvas>
+    <div id="ui" class="ui">
+      <input type="file" id="upload" class="interactable" />
+      <div class="mesh-gallery-container interactable">
+        <div id="mesh-gallery" class="mesh-gallery">
+        </div>
+      </div>
+      <div class="background-picker-container">
+        <div id="background-picker" class="background-picker interactable">
+        </div>
+      </div>
+      <!-- TD: Slider et Color Picker pour l'intensité de la lumière et sa couleur -->
+    </div>
+  </body>
+</html>

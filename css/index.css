@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  border-left: 6px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  background-color: #fff;
+}

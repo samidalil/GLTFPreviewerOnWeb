@@ -1,0 +1,21 @@
+.mesh-gallery-container {
+  background-color: rgba(255, 255, 255, 0.4);
+  max-width: 900px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.mesh-gallery {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.mesh-gallery-item {
+  margin: 10px;
+}
+
+.mesh-gallery-item canvas {
+  width: 300px;
+  height: 150px;
+}

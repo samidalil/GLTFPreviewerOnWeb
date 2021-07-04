@@ -1,0 +1,17 @@
+.background-picker-container {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  max-height: 900px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.background-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.background-picker-item {
+  margin: 10px;
+}
