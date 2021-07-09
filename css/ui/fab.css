@@ -1,0 +1,35 @@
+.bg-color-primary {
+  background-color: #d22238;
+}
+
+.bg-color-neutral {
+  background-color: rgba(180, 180, 180, 0.6);
+}
+
+.bg {
+  background-color: black;
+}
+
+.fab {
+  transition: background-color 300ms;
+  width: fit-content;
+  border: none;
+  border-radius: 9999px;
+  padding: 5px;
+  pointer-events: all;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.icon-container {
+  transition: background-color 300ms;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+}
+
+.icon-properties {
+  color: white;
+}

@@ -1,9 +1,24 @@
+.background-picker-anchor {
+  position: absolute;
+  top: 200px;
+  right: 120px;
+}
+
+.background-picker-display-button-anchor {
+  position: absolute;
+  top: 200px;
+  right: 50px;
+}
+
 .background-picker-container {
+  transition: opacity 300ms;
   background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
   width: fit-content;
-  max-height: 900px;
+  max-height: 150px;
   overflow-x: hidden;
   overflow-y: auto;
+  opacity: 1;
 }
 
 .background-picker {
@@ -14,4 +29,18 @@
 
 .background-picker-item {
   margin: 10px;
+}
+
+.background-picker-item button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+  text-shadow: 0 2px 12px rgba(100, 100, 100, 1);
+  /* font-family: 'Bebas Neue', cursive; */
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Epilogue', sans-serif;
+  font-size: 14px;
+  color: white;
 }

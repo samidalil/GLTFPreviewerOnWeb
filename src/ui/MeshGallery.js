@@ -1,6 +1,7 @@
 import { div } from "./elements.js";
 
 class MeshGallery {
+  static galleryContainer = document.getElementById("mesh-gallery-container");
   static gallery = document.getElementById("mesh-gallery");
 
   static append = (canvas, onClick) => {

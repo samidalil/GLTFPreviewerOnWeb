@@ -1,0 +1,11 @@
+.light-color-picker-anchor {
+  position: absolute;
+  top: 270px;
+  right: 50px;
+}
+
+.light-intensity-slider-anchor {
+  position: absolute;
+  top: 315px;
+  right: 50px;
+}

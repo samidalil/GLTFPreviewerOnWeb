@@ -14,5 +14,5 @@ export const backgrounds = [
     "https://raw.githubusercontent.com/timoxley/threejs/master/examples/textures/cube/SwedishRoyalCastle/ny.jpg",
     "https://raw.githubusercontent.com/timoxley/threejs/master/examples/textures/cube/SwedishRoyalCastle/pz.jpg",
     "https://raw.githubusercontent.com/timoxley/threejs/master/examples/textures/cube/SwedishRoyalCastle/nz.jpg",
-  ]
+  ],
 ];

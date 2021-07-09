@@ -1,6 +1,7 @@
 import { button, div } from "./elements.js";
 
 class BackgroundPicker {
+  static listContainer = document.getElementById("background-picker-container");
   static list = document.getElementById("background-picker");
 
   static append = (name, onClick) => {

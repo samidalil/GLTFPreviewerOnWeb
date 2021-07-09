@@ -24,6 +24,7 @@ class ThreeManager {
   currentBackgroundIndex = null;
   currentSceneIndex = null;
   gltfLoader = new GLTFLoader(new LoadingManager());
+  light = null;
   mixer = null;
   renderer = null;
   scene = null;
@@ -64,7 +65,7 @@ class ThreeManager {
       0.25,
       100
     );
-    this.camera.position.set(0, 0, 4);
+    this.camera.position.set(0, 0, 15);
 
     this.controls = new OrbitControls(this.camera, this.canvas);
     this.controls.minDistance = 2;
@@ -74,7 +75,8 @@ class ThreeManager {
 
     /** Populate */
 
-    this.scene.add(new THREE.AmbientLight(0xffffff));
+    this.light = new THREE.AmbientLight(0xffffff);
+    this.scene.add(this.light);
     this.loadBackgroundTextures().then(() => this.switchBackground(0));
 
     new THREE.PMREMGenerator(this.renderer).compileEquirectangularShader();
@@ -105,27 +107,37 @@ class ThreeManager {
     const onSelect = () => this.switchScene(index);
     const thumbnail = new MeshThumbnailRenderer(this.scenes[index], onSelect);
 
-    thumbnail.render(this.backgroundTextures[this.currentBackgroundIndex]);
+    thumbnail.changeBackground(
+      this.backgroundTextures[this.currentBackgroundIndex]
+    );
     this.thumbnailRenderers.push(thumbnail);
     onSelect();
   };
+
+  changeLightColor = (color) => this.light.color.set(color);
+
+  changeLightIntensity = (intensity) => (this.light.intensity = intensity);
 
   switchScene = (index) => {
     if (this.currentSceneIndex !== null) {
       this.scene.remove(this.scenes[this.currentSceneIndex]);
       this.mixer.stopAllAction();
     }
-    
+
     this.currentSceneIndex = index;
     this.scene.add(this.scenes[index]);
     this.mixer = new THREE.AnimationMixer(this.scenes[index]);
-    this.animationBatches[index].forEach((clip) => this.mixer.clipAction(clip).play());
+    this.animationBatches[index].forEach((clip) =>
+      this.mixer.clipAction(clip).play()
+    );
   };
 
   switchBackground = (index) => {
     this.currentBackgroundIndex = index;
     this.scene.background = this.backgroundTextures[index];
-    this.thumbnailRenderers.forEach((e) => e.render(this.scene.background));
+    this.thumbnailRenderers.forEach((e) =>
+      e.changeBackground(this.scene.background)
+    );
   };
 
   render = () => {

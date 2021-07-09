@@ -1,26 +1,110 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/three.css">
-    <link rel="stylesheet" href="./css/ui/background-picker.css">
-    <link rel="stylesheet" href="./css/ui/index.css">
-    <link rel="stylesheet" href="./css/ui/mesh-gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/three.css" />
+    <link rel="stylesheet" href="./css/ui/background-picker.css" />
+    <link rel="stylesheet" href="./css/ui/fab.css" />
+    <link rel="stylesheet" href="./css/ui/index.css" />
+    <link rel="stylesheet" href="./css/ui/light.css" />
+    <link rel="stylesheet" href="./css/ui/mesh-gallery.css" />
+    <link rel="stylesheet" href="./css/ui/slider.css" />
+    <link rel="stylesheet" href="./css/ui/title.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <script type="module" src="./src/index.js"></script>
   </head>
   <body>
     <canvas id="three-js-canvas"></canvas>
     <div id="ui" class="ui">
-      <input type="file" id="upload" class="interactable" />
-      <div class="mesh-gallery-container interactable">
-        <div id="mesh-gallery" class="mesh-gallery">
+      <div class="apartment-infos-container">
+        <div class="zone-name">
+          <span class="hyphen">–</span>
+          <span class="content">THREE.js Mesh Viewer</span>
+          <span class="hyphen">–</span>
+        </div>
+        <div class="room-name">Visualize your meshes !</div>
+      </div>
+
+      <div class="mesh-gallery-display-button-anchor">
+        <button
+          id="mesh-gallery-display-button"
+          class="fab interactable bg-color-neutral"
+        >
+          <div class="icon-container">
+            <span class="material-icons icon-properties">change_history</span>
+          </div>
+        </button>
+      </div>
+
+      <label class="upload-button-anchor">
+        <div class="fab interactable bg-color-primary">
+          <div class="icon-container">
+            <span class="material-icons icon-properties">upload</span>
+          </div>
+        </div>
+        <input id="upload" style="display: none" title="upload" type="file" />
+      </label>
+
+      <div class="mesh-gallery-anchor">
+        <div
+          id="mesh-gallery-container"
+          class="mesh-gallery-container hide"
+        >
+          <div id="mesh-gallery" class="mesh-gallery"></div>
         </div>
       </div>
-      <div class="background-picker-container">
-        <div id="background-picker" class="background-picker interactable">
+
+      <div class="background-picker-display-button-anchor">
+        <button
+          id="background-picker-display-button"
+          class="fab interactable bg-color-neutral"
+        >
+          <div class="icon-container">
+            <span class="material-icons icon-properties">collections</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="background-picker-anchor">
+        <div
+          id="background-picker-container"
+          class="background-picker-container hide"
+        >
+          <div id="background-picker" class="background-picker"></div>
         </div>
       </div>
-      <!-- TD: Slider et Color Picker pour l'intensité de la lumière et sa couleur -->
+
+      <div class="light-color-picker-anchor">
+        <input
+          id="light-color"
+          class="light-color interactable"
+          title="light-color"
+          type="color"
+          value="#ffffff"
+        />
+      </div>
+
+      <div class="light-intensity-slider-anchor">
+        <input
+          id="light-intensity"
+          class="light-intensity interactable"
+          title="light-intensity"
+          type="range"
+          orient="vertical"
+          min="0"
+          max="1"
+          value="1"
+          step="0.05"
+        />
+      </div>
     </div>
   </body>
 </html>

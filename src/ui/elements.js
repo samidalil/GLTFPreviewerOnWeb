@@ -8,7 +8,6 @@ const htmlElementFactory = (name) => (properties) => {
       element.setAttribute(key, value)
     );
 
-
     if (children !== undefined && children !== null) {
       const type = typeof children;
 

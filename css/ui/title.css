@@ -1,0 +1,31 @@
+.apartment-infos-container {
+  margin-top: 10px;
+}
+
+.apartment-infos-container .zone-name {
+  display: flex;
+  justify-content: center;
+}
+
+.apartment-infos-container .zone-name .hyphen {
+  font-family: "Playfair Display";
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.apartment-infos-container .zone-name .content {
+  margin: 0 13px;
+  font-family: "Bebas Neue";
+  font-size: 26px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.apartment-infos-container .room-name {
+  font-family: "Playfair Display";
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  color: #ffffff;
+}
